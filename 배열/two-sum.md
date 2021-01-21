@@ -32,9 +32,9 @@ Output: [0,1]
 ~~~
 def twoSum2(self, nums, target):
     for i, n in enumerate(nums):
-        complement = target - n
+        complement = target - n  ## 첫번째 값을 빼서 새로운 리스트 생성
 
-        if complement in nums[i+1:]:
+        if complement in nums[i+1:]:  ## in을 통한 탐색
             return nums.index(n), nums[i+1:].index(complement)+(i+1)
 ~~~
 
