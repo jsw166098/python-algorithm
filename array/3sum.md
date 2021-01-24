@@ -52,6 +52,8 @@ def threeSum2(self, nums):
          left, right = i+1, len(nums) -1
          while left < right:
              sum = nums[i] + nums[left] + nums[right]
+
+             ## sum을 통해서 투 포인터 이동!!
              if sum < 0:
                  left += 1
              elif sum > 0:
